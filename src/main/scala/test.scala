@@ -23,6 +23,6 @@ object test extends App{
 
     retaildf.printSchema()
     retaildf.show(false)
-  
+
 }
 
