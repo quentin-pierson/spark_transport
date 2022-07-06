@@ -56,21 +56,19 @@ object taxiNYC extends App {
 
 //  select(purchase_stream)
 
-  sparkSession.sql(
-    """
-      |select * from test
-      |""".stripMargin)
-    .show(false)
+//  sparkSession.sql(
+//    """
+//      |select * from test
+//      |""".stripMargin)
+//    .show(false)
 
-  sparkSession.stop()
-
-//  for (i <- 1 to 10 ) {
-//   sparkSession.sql(
-//     """
-//       |select * from purchase_stream
-//       |order by `sum(passenger_count)` DESC
-//       |""".stripMargin)
-//     .show(false)
-//   Thread.sleep(1000)
-//  }
+  for (i <- 1 to 10 ) {
+   sparkSession.sql(
+     """
+       |select * from test
+       |order by `sum(passenger_count)` DESC
+       |""".stripMargin)
+     .show(false)
+   Thread.sleep(1000)
+  }
 }
